@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
+    font-size: 16px; 
 }
 
 #login, #chat {
@@ -15,9 +16,10 @@ body {
 }
 
 #login input[type="text"],
-#form input[type="text"] {
+#form input[type="text"],
+#form button {
     padding: 10px;
-    font-size: 16px;
+    font-size: 16px; 
     border: 1px solid #ccc;
     border-radius: 5px;
     width: calc(100% - 80px);
@@ -66,4 +68,34 @@ body {
 
 #form button {
     width: 60px;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+    #login, #chat {
+        width: 90%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    #login input[type="text"],
+    #form input[type="text"],
+    #form button {
+        width: calc(100% - 20px);
+        margin-right: 0;
+    }
+
+    #form button {
+        width: 30%;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    #login input[type="text"],
+    #form input[type="text"],
+    #form button {
+        font-size: 14px; 
+    }
 }
