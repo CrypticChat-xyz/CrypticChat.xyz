@@ -1,0 +1,25 @@
+{
+  "name": "cryptic",
+  "version": "1.0.0",
+  "description": "Cryptic: The chatting app made for Cryptocurrency-based communities.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm install socket.io express && node .",
+    "build": "npm install socket.io express && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CrypticBot/Cryptic.git"
+  },
+  "author": "Cryptic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CrypticBot/Cryptic/issues"
+  },
+  "homepage": "https://github.com/CrypticBot/Cryptic#readme",
+  "dependencies": {
+    "express": "^4.18.3",
+    "socket.io": "^4.7.4"
+  }
+}
