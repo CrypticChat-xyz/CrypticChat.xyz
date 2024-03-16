@@ -1,5 +1,6 @@
 # 🥳 UPDATE 1.0.1!
 QOL Improvements
+
 Check [CHANGELOG.md](CHANGELOG.md) for more information on this update.
 
 # Cryptic
