@@ -24,25 +24,35 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
-        $(document).ready(function() {
+        document.addEventListener('DOMContentLoaded', function() {
             var socket = io();
-            $('#joinBtn').click(function() {
-                var username = $('#username').val();
+            var joinBtn = document.getElementById('joinBtn');
+            var loginDiv = document.getElementById('login');
+            var chatDiv = document.getElementById('chat');
+            var usernameInput = document.getElementById('username');
+            var form = document.getElementById('form');
+            var input = document.getElementById('input');
+            var messages = document.getElementById('messages');
+
+            joinBtn.addEventListener('click', function() {
+                var username = usernameInput.value;
                 if (username) {
                     socket.emit('new user', username);
-                    $('#login').hide();
-                    $('#chat').show();
+                    loginDiv.style.display = 'none';
+                    chatDiv.style.display = 'block';
                 }
             });
 
-            $('#form').submit(function(event) {
+            form.addEventListener('submit', function(event) {
                 event.preventDefault(); 
-                socket.emit('chat message', $('#input').val());
-                $('#input').val('');
+                socket.emit('chat message', input.value);
+                input.value = '';
             });
 
             socket.on('chat message', function(msg) {
-                $('#messages').append($('<li>').text(msg));
+                var li = document.createElement('li');
+                li.textContent = msg;
+                messages.appendChild(li);
                 window.scrollTo(0, document.body.scrollHeight);
             });
         });
