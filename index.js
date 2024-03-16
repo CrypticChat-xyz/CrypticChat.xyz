@@ -15,6 +15,12 @@ io.on('connection', (socket) => {
         io.emit('chat message', `${username} has joined the chat`);
     });
 
+    socket.on('disconnect', () => {
+        if (socket.username) {
+            io.emit('chat message', `${socket.username} has left the chat`);
+        }
+    });
+
     socket.on('chat message', (msg) => {
         if (msg.trim() !== '') {
             console.log(`[${socket.handshake.address}] ${socket.username}: ${msg}`);
