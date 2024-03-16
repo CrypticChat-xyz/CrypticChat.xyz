@@ -16,6 +16,7 @@
         </div>
         <div id="chat" style="display:none;">
             <div id="ticker"></div>
+            <div id="online-users"></div> <!-- Container for online users list -->
             <ul id="messages"></ul>
             <form id="form" action="">
                 <input id="input" type="text" autocomplete="off" placeholder="Type your message..." />
@@ -53,6 +54,13 @@
                 for (const [crypto, priceData] of Object.entries(prices)) {
                     $('#ticker').append(`<p>${crypto}: $${priceData.usd}</p>`);
                 }
+            });
+
+            socket.on('online users', function (users) {
+                $('#online-users').empty();
+                users.forEach(function (user) {
+                    $('#online-users').append($('<div>').text(user));
+                });
             });
         });
     </script>

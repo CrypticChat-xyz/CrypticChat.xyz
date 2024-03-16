@@ -31,6 +31,10 @@ async function getCryptoPrices() {
 }
 
 io.on('connection', async (socket) => {
+    let onlineUsers = [];
+
+    io.emit('online users', onlineUsers);
+
     const prices = await getCryptoPrices();
     if (prices) {
         io.to(socket.id).emit('crypto prices', prices);
@@ -45,12 +49,19 @@ io.on('connection', async (socket) => {
 
     socket.on('new user', (username) => {
         socket.username = username;
+        onlineUsers.push(username);
+        io.emit('online users', onlineUsers);
         io.emit('chat message', `${username} has joined the chat`);
     });
 
     socket.on('disconnect', () => {
         if (socket.username) {
-            io.emit('chat message', `${socket.username} has left the chat`);
+            const index = onlineUsers.indexOf(socket.username);
+            if (index !== -1) {
+                onlineUsers.splice(index, 1);
+                io.emit('online users', onlineUsers);
+                io.emit('chat message', `${socket.username} has left the chat`);
+            }
         }
     });
 
