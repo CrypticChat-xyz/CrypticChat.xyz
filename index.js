@@ -68,7 +68,7 @@ io.on('connection', async (socket) => {
     socket.on('chat message', (msg) => {
         if (msg.trim() !== '') {
             const timestamp = new Date().toLocaleTimeString();
-            const messageWithTimestamp = `[${timestamp}] ${socket.username}: ${msg}`;
+            const messageWithTimestamp = `[${timestamp} GMT] ${socket.username}: ${msg}`;
             
             if (containsSwearWords(msg)) {
                 const filteredMessage = filterSwearWords(msg);
