@@ -1,5 +1,6 @@
 # 🥳 UPDATE 1.0.1!
-Added QOL updates such as checking Cryptocurrency prices from the website and timestamps! Also added message filtering.
+QOL Improvements
+Check [CHANGELOG.md](CHANGELOG.md) for more information on this update.
 
 # Cryptic
 The chatting app made for Cryptocurrency-based communities.
