@@ -1,5 +1,6 @@
 # Update 1.0.2:
 Enhanced Mobile-Friendliness:
+
 Added Bootstrap framework to ensure responsiveness across various screen sizes.
 Adjusted margins, padding, and alignment for improved readability and user experience on smaller screens.
 
