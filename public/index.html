@@ -11,19 +11,22 @@
 <body>
     <div class="container">
         <div id="login" class="text-center">
-            <input id="username" type="text" class="form-control mb-2" placeholder="Enter your name">
+            <h1 class="mb-4">Welcome to Cryptic</h1>
+            <input id="username" type="text" class="form-control mb-3" placeholder="Enter your name">
             <button id="joinBtn" class="btn btn-primary">Join Chat</button>
         </div>
         <div id="chat" style="display:none;">
-            <div id="ticker" class="mb-3"></div>
-            <div id="online-users" class="mb-3"></div> <!-- Container for online users list -->
+            <div id="ticker" class="mb-4"></div>
+            <div id="online-users"></div> <!-- Container for online users list -->
             <ul id="messages" class="list-unstyled"></ul>
-            <form id="form" class="d-flex">
+            <form id="form" class="d-flex mt-4">
                 <input id="input" type="text" class="form-control me-2" autocomplete="off" placeholder="Type your message...">
                 <button type="submit" class="btn btn-primary">Send</button>
             </form>
         </div>
-        <p class="text-center mt-3">Checking the price of custom cryptocurrencies is not available until further notice. Sorry for the inconvenience!</p>
+    </div>
+    <div class="footer text-center">
+        <p>&copy; 2024 Cryptic. All rights reserved.</p>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
