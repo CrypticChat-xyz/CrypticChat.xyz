@@ -1,5 +1,5 @@
-# 🥳 UPDATE 1.0.1!
-QOL Improvements
+# 🥳 UPDATE 1.0.2!
+Project improvements
 
 Check [CHANGELOG.md](CHANGELOG.md) for more information on this update.
 
