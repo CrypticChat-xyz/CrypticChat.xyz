@@ -19,6 +19,7 @@ Clone the Repository:
 Begin by cloning the repository onto your device. Execute the following command, ensuring you have the necessary permissions:
 
 ` sudo git clone https://github.com/CrypticChat-xyz/CrypticChat.xyz`
+
 Make Your Changes:
 Once the repository is cloned, feel free to make your desired changes. It's essential to thoroughly test the application on your local machine to ensure everything functions correctly. Your initial testing will greatly expedite the review process.
 
