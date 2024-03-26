@@ -1,6 +1,6 @@
-# Cryptic
 <div align="center">
-The chatting app made for Cryptocurrency-based communities.
+  <h1>Cryptic</h1>
+  The chatting app made for Cryptocurrency-based communities.
   <img src="https://raw.githubusercontent.com/CrypticChat-xyz/CrypticChat.xyz/main/img/crytic.png" alt="Cryptic Chat Logo">
 </div>
 
